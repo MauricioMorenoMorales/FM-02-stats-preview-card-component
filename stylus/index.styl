@@ -1,3 +1,50 @@
 @import './_tokens.styl'
 @import './_reset-styles.styl'
 
+body
+	font-family ffPrimary
+	background-color veryDarkBlue
+	color white
+
+main
+	display flex
+	flex-direction column
+	background-color darkDesaturatedBlue
+	max-width 320px
+	margin 50px auto
+	border-radius 20px
+	overflow hidden
+	box-shadow 14px 17px 31px 0px rgba(30,30,30,0.55)
+
+h1
+	font-size 2.8rem
+
+.accented-text
+	color softViolet
+
+.hero
+	position relative
+	&__filter
+		position absolute
+		top 0
+		bottom 4px
+		left 0
+		right 0
+		background-color transparentify(softViolet, 56%)
+
+.description
+	text-align center
+	padding 20px
+	font-size 1.6rem
+	&__points
+		margin-bottom 30px
+		&__item
+			margin-top 30px
+			h3
+				margin 0
+			p
+				margin 0
+				color whiteStatHeadings
+				font-size 1.4rem
+				text-transform uppercase
+				font-family ffSecondary
