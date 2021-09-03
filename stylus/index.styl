@@ -4,6 +4,7 @@
 body
 	font-family ffPrimary
 	background-color veryDarkBlue
+	min-height 100vh
 	color white
 
 main
@@ -48,3 +49,27 @@ h1
 				font-size 1.4rem
 				text-transform uppercase
 				font-family ffSecondary
+
+@media screen and (min-width 1000px)
+	main
+		display grid
+		grid-template-columns 500px 500px
+		grid-template-areas "description image"
+		max-width 1000px
+
+	.hero
+		width 500px
+		grid-area image
+		height 350px
+		&__filter
+			bottom 0
+
+	.description
+		grid-area description
+		text-align start
+		margin-left 40px
+		margin-right 40px
+		&__points
+			display flex
+			&__item
+				margin-right 40px
